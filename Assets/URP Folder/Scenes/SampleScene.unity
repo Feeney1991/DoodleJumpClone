@@ -5826,7 +5826,7 @@ MonoBehaviour:
   platformPrefab: {fileID: 5817263505273256445, guid: 93bb20c9e2534df4396ad5b32dcb9146, type: 3}
   spawnInterval: 0.2
   platformSpeed: 2
-  screenWidth: 9
+  screenWidth: 18
   spawnHeight: 10
   resetHeight: -5
 --- !u!1 &1577897493
