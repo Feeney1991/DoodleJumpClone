@@ -5801,12 +5801,12 @@ MonoBehaviour:
   platformTypeA: {fileID: 5817263505273256445, guid: 93bb20c9e2534df4396ad5b32dcb9146, type: 3}
   platformTypeB: {fileID: 5817263505273256445, guid: 1f290c7d894891544a3955fd9a6af25f, type: 3}
   platformTypeC: {fileID: 5817263505273256445, guid: d59f1bb2105dc8a458df33d180b17c40, type: 3}
-  screenWidth: 30
+  screenWidth: 26.3
   initialPlatformCount: 750
   maxHeight: 5000
-  platformsPer1000Y: 10
-  weightA: 0.7
-  weightB: 0.2
+  platformsPer1000Y: 10.63
+  weightA: 0.75
+  weightB: 0.15
   weightC: 0.1
 --- !u!1 &1577897493
 GameObject:
