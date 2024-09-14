@@ -18,6 +18,9 @@ public class PlatformSpawnerFixedLocation : MonoBehaviour
     public float weightB = 0.2f;  // 20% chance for Type B
     public float weightC = 0.1f;  // 10% chance for Type C
 
+    //Testing a sphere collider to prevent Collisions between platforms
+    public float sphereRadius = 2f;
+
     void Start()
     {
         // Call the method to spawn platforms at the start of the game
@@ -42,18 +45,7 @@ public class PlatformSpawnerFixedLocation : MonoBehaviour
     {
         for (int i = 0; i < platformCount; i++)
         {
-            // Random X position within screen bounds
-            float randomX = Random.Range(-screenWidth / 2f, screenWidth / 2f);
-
-            // Random Y position within the current section's bounds
-            float randomY = Random.Range(heightStart, heightEnd);
-
-            // Determine which platform type to spawn based on random chance
-            GameObject platformPrefab = GetRandomPlatformType();
-
-            // Create the platform at the random position
-            Vector2 spawnPosition = new Vector2(randomX, randomY);
-            Instantiate(platformPrefab, spawnPosition, Quaternion.identity);
+            SpawnPlatform(heightStart, heightEnd);
         }
     }
 
@@ -75,5 +67,24 @@ public class PlatformSpawnerFixedLocation : MonoBehaviour
         {
             return platformTypeC;  // Type C (rare)
         }
+    }
+
+    public void SpawnPlatform(float heightStart, float heightEnd)
+    {
+        // Random X position within screen bounds
+        float randomX = Random.Range(-screenWidth / 2f, screenWidth / 2f);
+
+        // Random Y position within the current section's bounds
+        float randomY = Random.Range(heightStart, heightEnd);
+
+        // Determine which platform type to spawn based on random chance
+        GameObject platformPrefab = GetRandomPlatformType();
+
+        // Create the platform at the random position
+        Vector2 spawnPosition = new Vector2(randomX, randomY);
+
+        //Spawns the platform
+        Instantiate(platformPrefab, spawnPosition, Quaternion.identity);
+
     }
 }
